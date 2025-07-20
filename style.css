@@ -4,26 +4,175 @@
     padding: 0;
 }
 body{
-    background-image: url(./space_stars_planet_nebula_hd_space-2560x1440.jpg);
+    background-image: url(./images/space.jpg);
     background-size: cover;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif:'Courier New', Courier, monospace;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 section{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vb;
-
-}
-ul{
-    
+    height: 100vh;
+    max-width: 100%;
 }
 ul li{
-    background-color: rgb(0, 132, 255);
+    background-color: #c8406d;
+    padding: 10px;
     text-align: center;
     font-size: 25px;
     list-style: none;
-    margin: 10px;
+    margin: 20px;
+    letter-spacing: 5px;
     color: white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: 0.5s ;
+    -webkit-transition: 0.5s ;
+    -moz-transition: 0.5s ;
+    -ms-transition: 0.5s ;
+    -o-transition: 0.5s ;
+    position: relative;
+    cursor: pointer;
+}
+ul:hover li{ /*عشان نخلى القائمه تختفى لما اعمل هوفر عليها */
+ opacity: 0;   
+}
+ul li:hover{
+   transform: scale(1.5);
+   -webkit-transform: scale(1.5);
+   -moz-transform: scale(1.5);
+   -ms-transform: scale(1.5);
+   -o-transform: scale(1.5);
+   background-color:#27b7d4;
+   opacity: 1;/*عشان يخلى العنصر اللى واقفه عليه بس هو اللى ظاهر*/
+}
+ul li::after {
+    content: attr(data-text);
+    color: white;
+    font-size: 100px;
+    font-weight:700;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50% , 50%)    ;
+    -webkit-transform: translate(-50% , 50%)    ;
+    -moz-transform: translate(-50% , 50%)    ;
+    -ms-transform: translate(-50% , 50%)    ;
+    -o-transform: translate(-50% , 50%)    ;
+    pointer-events: none;
+    letter-spacing: 70px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+ul li:hover:after{
+    opacity: 0.7;
+    letter-spacing: 5px;
+}
+.Mercury::before,
+.Venus::before,
+.Earth::before,
+.Mars::before,
+.Jupiter::before,
+.Saturn::before,
+.Uranus::before,
+.Neptune::before
+{
+    content: "";
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    top: 170%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+    opacity: 0;
+}
+.Mercury::before{
+    background-image: url(./images/Mercury.webp);
+}
+ul .Mercury:hover:before{
+    opacity: 1;
+}
+.Venus::before{
+    background-image: url(./images/Venus.webp);
+}
+ul .Venus:hover:before{
+    opacity: 1;
+}
+.Earth::before{
+    background-image: url(./images/earth.webp);
+}
+ul .Earth:hover:before{
+    opacity: 1;
+}
+.Mars::before{
+    background-image: url(./images/mars.webp);
+}
+ul .Mars:hover:before{
+    opacity: 1;
+}
+.Jupiter::before{
+    background-image: url(./images/Jupiter.webp);
+}
+ul .Jupiter:hover:before{
+    opacity: 1;
+}
+.Saturn::before{
+    background-image: url(./images/Saturn.webp);
+}
+ul .Saturn:hover:before{
+    opacity: 1;
+}
+.Uranus::before{
+    background-image: url(./images/Uranus.webp);
+}
+ul .Uranus:hover:before{
+    opacity: 1;
+}
+.Neptune::before{
+    background-image: url(./images/Neptune.webp);
+}
+ul .Neptune:hover:before{
+    opacity: 1;
+}
+ @media (max-width: 768px){
+    ul {
+        flex-direction: column;
+    }
+    ul li{
+        font-size: 16px;
+        padding: 5px;
+        margin: 10px;
+    }
+    .Mercury::before,
+    .Venus::before,
+    .Earth::before,
+    .Mars::before,
+    .Jupiter::before,
+    .Saturn::before,
+    .Uranus::before,
+    .Neptune::before{
+        width: 50px;
+        height: 50px;
+        top: 230%;
+    }
+    ul li::after {
+    font-size: 50px;
+    font-weight:500;
+    top: 160%;
     
 }
+
+
+
