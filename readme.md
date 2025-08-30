@@ -17,6 +17,9 @@ https://www.youtube.com/watch?v=429mEJF_VEg&t=22s&pp=ygUYY3JlYXRpdmUgbmF2YmFyIGh
 
 ![screenshot](./images/screenshot.webp)
 
+### 🚀 Live Demo
+👉 [Live Preview]( https://amira713.github.io/space-navbar/)  
+
 ## 🛠️ Technologies Used
 
 - HTML5
